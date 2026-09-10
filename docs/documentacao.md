@@ -49,10 +49,20 @@ Três tabelas principais:
   do autor e da categoria (via `LEFT JOIN`).
 
 
-  ## 5. Frontend
+## 5. Frontend
 
 - `index.html`: página de boas-vindas com link para o gerenciamento de
   livros.
 - `livros.html`: formulário de cadastro (`fetch` → `cadastrar_livro.php`)
   e tabela que lista os livros cadastrados (`fetch` → `listar_livros.php`),
   atualizada automaticamente após cada cadastro.
+
+
+
+## 6. Como rodar localmente
+
+1. Coloque a pasta `livraria-projeto` dentro de `htdocs` do XAMPP.
+2. Inicie o Apache e o MySQL pelo painel do XAMPP.
+3. Copie e cole `database/script_criacao.sql` no phpMyAdmin (ou via terminal:
+   `mysql -u root < database/script_criacao.sql`).
+4. Acesse `http://localhost/livraria-projeto/frontend/index.html`.
