@@ -35,6 +35,7 @@ create table livros (
     	references categorias (id_categoria)
 );
 
+
 insert into categorias (nome) values ('Romance');
 insert into categorias (nome) values ('Ficcao Cientifica');
 insert into categorias (nome) values ('Tecnologia');
