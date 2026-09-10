@@ -1,17 +1,21 @@
 create table categorias (
+
 	id_categoria int not null auto_increment,
 	nome varchar(80) not null,
     primary key (id_categoria)
 );
 
 create table autores (
+
 	id_autor int not null auto_increment,
 	nome varchar(120) not null,
 	nacionalidade varchar(60),
     primary key (id_autor)
 );
 
+
 create table livros (
+	
 	id_livro int not null auto_increment,
 	titulo varchar(150) not null,
 	ano_publicacao int,
