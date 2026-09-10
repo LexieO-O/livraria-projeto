@@ -10,3 +10,5 @@ try {
     $pdo = new PDO("mysql:host={$host};port={$porta};dbname{$banco};charset=utf8mb4", $usuario, $senha, [ PDO::ATTR_ERRMODE])
 }
 ?>
+
+teste teste testeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
