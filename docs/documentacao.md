@@ -35,3 +35,15 @@ Três tabelas principais:
 
 `livros` se relaciona com `autores` e `categorias` por chave estrangeira
 (N:1 em ambos os casos).
+
+
+## 4. Backend (PHP)
+
+- `conexao.php`: abre a conexão PDO com o banco `livraria` (host, usuário
+  e senha configuráveis no topo do arquivo — por padrão, valores do
+  XAMPP: `root` sem senha).
+- `cadastrar_livro.php`: recebe `POST` (JSON ou form-data) com os campos
+  do livro, valida o título e insere o registro. Retorna JSON com
+  `sucesso`, `mensagem` e `id_livro`.
+- `listar_livros.php`: retorna, em JSON, todos os livros já com o nome
+  do autor e da categoria (via `LEFT JOIN`).
