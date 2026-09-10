@@ -47,3 +47,12 @@ Três tabelas principais:
   `sucesso`, `mensagem` e `id_livro`.
 - `listar_livros.php`: retorna, em JSON, todos os livros já com o nome
   do autor e da categoria (via `LEFT JOIN`).
+
+
+  ## 5. Frontend
+
+- `index.html`: página de boas-vindas com link para o gerenciamento de
+  livros.
+- `livros.html`: formulário de cadastro (`fetch` → `cadastrar_livro.php`)
+  e tabela que lista os livros cadastrados (`fetch` → `listar_livros.php`),
+  atualizada automaticamente após cada cadastro.
