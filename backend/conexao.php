@@ -14,5 +14,13 @@ try {
             PDO::ATTR_DEFAULT_FECT_MODE => PDO::FETCH ASSOC,
         ]
     );
+} catch (PDOException $e) {
+    http_response_code(500);
+    header('Content-Type: application/json; charset=utf-8');
+    echo json_encode([
+        'sucesso' => false,
+        'mensagem' => 'Erro para conectar no banco de dados: ' . $e->getMessage(),
+    ]);
+    exit;
 }
 ?>
