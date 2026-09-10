@@ -66,3 +66,34 @@ Três tabelas principais:
 3. Copie e cole `database/script_criacao.sql` no phpMyAdmin (ou via terminal:
    `mysql -u root < database/script_criacao.sql`).
 4. Acesse `http://localhost/livraria-projeto/frontend/index.html`.
+
+
+## 7. Fluxo de trabalho em grupo (Git)
+
+Cada integrante trabalha em uma branch:
+
+| Parte do projeto      | Branch     |
+|------------------------|-----------|
+| Frontend (telas)       | `frontend`|
+| Backend (lógica)       | `backend` |
+| Banco de dados         | `database`|
+| Documentação           | `docs`    |
+
+Fluxo padrão de cada integrante:
+
+git switch main
+git branch nome-da-branch
+git switch nome-da-branch
+# ... editar apenas os arquivos da sua parte ...
+git add .
+git commit -m "descreva o que você fez"
+git push -u origin nome-da-branch
+
+Ao final, uma pessoa do grupo reúne tudo na `main`:
+
+git switch main
+git merge frontend
+git merge backend
+git merge database
+git merge docs
+git push -u origin main
