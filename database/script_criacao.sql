@@ -3,14 +3,16 @@ create database livraria;
 use livraria;
 
 create table categorias (
-	id_categoria int not null identity(1,1) primary key,
-	nome varchar(80) not null
+	id_categoria int not null identity(1,1) auto_increment,
+	nome varchar(80) not null,
+	primary key (id_categoria)
 );
 
 create table autores (
-	id_autor int not null identity(1,1) primary key,
+	id_autor int not null auto_increment,
 	nome varchar(120) not null,
-	nacionalidade varchar(60)
+	nacionalidade varchar(60),
+	primary key (id_autor)
 );
 
 create table livros (
@@ -20,8 +22,16 @@ create table livros (
 	isbn varchar(20),
 	quantidade_estoque int not null default 0,
 	preco float not null default 0,
-	id_autor int foreign key references autores (id_autor),
-	id_categoria int foreign key references categorias (id_categoria)
+	id_autor int,
+	id_categoria int ,
+
+	constraint fk_livros_autores
+		foreign key (id_autor) 
+		references autores(id_autor),
+
+	constraint fk_livros_categorias
+		foreign key (id_categoria)
+		references categorias(id_categoria)
 );
 
 insert into categorias (nome) values ('Romance');
